@@ -43,6 +43,6 @@ public class HelloClassLoader extends ClassLoader {
     	String dir = "/Users/spike/Downloads/Hello";
     	Class<?> clazz = new HelloClassLoader(dir).findClass("Hello");
     	Method method = clazz.getMethod("hello");
-    	method.invoke(clazz.newInstance(), args);
+    	method.invoke(clazz.newInstance());
 	}
 }

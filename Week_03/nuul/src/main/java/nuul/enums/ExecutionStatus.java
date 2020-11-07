@@ -1,0 +1,18 @@
+package nuul.enums;
+
+public enum ExecutionStatus {
+
+	SUCCESS(1), SKIPPED(-1), DISABLED(-2), FAILED(-3);
+
+	private int status;
+
+	ExecutionStatus(int status) {
+		this.status = status;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+	
+	
+}

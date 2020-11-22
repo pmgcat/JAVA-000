@@ -9,7 +9,7 @@ public class HW8_CyclicBarrier2 {
 
 	public static void main(String[] args) throws InterruptedException, BrokenBarrierException {
 		long start = System.currentTimeMillis();
-		CyclicBarrier barrier = new CyclicBarrier(2, null);
+		CyclicBarrier barrier = new CyclicBarrier(2);
 		KKFiboTask task = new KKFiboTask(barrier);
 		new Thread(task).start();
 		barrier.await();

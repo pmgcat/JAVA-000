@@ -1,0 +1,31 @@
+# DataSource Config
+spring:
+  datasource:
+   product-order:
+      primary:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/xmall?useUnicode=true&characterEncoding=utf8&serverTimezone=CTT
+        username: root
+        password: 123
+        minimum-idle: 10
+        maximum-pool-size: 25
+      replica0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/xmall?useUnicode=true&characterEncoding=utf8&serverTimezone=CTT
+        username: root
+        password: 123
+        minimum-idle: 10
+        maximum-pool-size: 25
+      replica1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/xmall2?useUnicode=true&characterEncoding=utf8&serverTimezone=CTT
+        username: root
+        password: 123
+        minimum-idle: 10
+        maximum-pool-size: 25  
+    
+
+# Logger Config
+logging:
+  level:
+    com.spike.dynamicdatasource: info
